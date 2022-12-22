@@ -1,0 +1,10 @@
+important points
+RapidTables is the website to convert binary no. to decimal.
+8 bites = 1 byte ex. 10203040 is 8 bits
+32 to 64 bits or 4 or 8 byte = word
+iso latin 1 character set is another website for looking charcters
+
+
+ also remember:-
+ Identifiers can be composed to letters,digits and the underscore character. They are sequence that make up a name ex.a1,_b3 . The can only be started with letter or an underscore.  
+ they are case sensitive upper and lower case are distinct. c++ language mposes no limit on name length. The language reserves a set of names for its own use these names may not be used as identifers ex.cout .
