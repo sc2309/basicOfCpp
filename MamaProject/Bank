@@ -1,0 +1,165 @@
+#include <iostream>
+#include <algorithm>
+#include <sys/time.h>
+using namespace std;
+
+class banks {
+	public:
+		char n;
+		string bank_choise,other_bank,name;
+		string HDFC = "HDFC" , SBI = "SBI",punjab_national_bank = "punjab_national_bank", ICICI = "ICICI", other = "other";
+};
+
+
+
+long gettime(){
+	struct timeval start;
+		gettimeofday(&start,NULL);
+		return start.tv_sec*1000000+start.tv_usec;
+
+	
+}
+
+int main(){	
+
+
+
+    long start = gettime();
+
+	banks b1;
+	
+	
+	cout << "Please enter your name with an underscore before last name if you have regisered your last name in your bank account." << endl;
+	cin >> b1.name;
+	
+	
+	cout << "Please enter which bank you are looking for." << endl;
+	cout << b1.HDFC << endl << b1.SBI << endl << b1.punjab_national_bank << endl << b1.ICICI << endl << b1.other << endl;
+	cin >> b1.bank_choise;
+	cout << endl;
+	
+	
+	if(b1.bank_choise == "HDFC"){
+		cout << "Please tell us which account are you looking for. " << endl;
+		cout << "S for savings account " << endl << "P for Personal account" << endl << "O for online banking account. " << endl;
+		cin >> b1.n;
+		
+		switch(b1.n){
+			case 'S' :
+				cout << "Your savings account is \" "<< b1.name << "Saves \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+				
+			case 'P' :
+				cout << "Your Personal account is \" " << b1.name << "1184 \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			case 'O' :
+				cout << "Your online banking account is \" " << b1.name << "Pays \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			default :
+				cout << "Sorry we don't know this account. " << endl;
+		}
+	}
+	
+	
+	else if(b1.bank_choise == b1.SBI){
+		cout << "Please tell us which account are you looking for. " << endl;
+		cout << "S for savings account " << endl << "P for Personal account" << endl << "O for online banking account. " << endl;
+		cin >> b1.n;
+		
+		switch(b1.n){
+			case 'S' :
+				cout << "Your savings account is \" "<< b1.name << "Saves \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+				
+			case 'P' :
+				cout << "Your Personal account is \" " << b1.name << "1184 \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			case 'O' :
+				cout << "Your online banking account is \" " << b1.name << "Pays \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			default :
+				cout << "Sorry we don't know this account. " << endl;
+		}
+	}
+	
+	
+	else if(b1.bank_choise == b1.punjab_national_bank){
+		cout << "Please tell us which account are you looking for. " << endl;
+		cout << "S for savings account " << endl << "P for Personal account" << endl << "O for online banking account. " << endl;
+		cin >> b1.n;
+		
+		switch(b1.n){
+			case 'S' :
+				cout << "Your savings account is \" "<< b1.name << "Saves \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+				
+			case 'P' :
+				cout << "Your Personal account is \" " << b1.name << "1184 \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			case 'O' :
+				cout << "Your online banking account is \" " << b1.name << "Pays \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			default :
+				cout << "Sorry we don't know this account. " << endl;
+		}
+	}
+	
+	
+	else if(b1.bank_choise == b1.ICICI){
+		cout << "Please tell us which account are you looking for. " << endl;
+		cout << "S for savings account " << endl << "P for Personal account" << endl << "O for online banking account. " << endl;
+		cin >> b1.n;
+		
+		switch(b1.n){
+			case 'S' :
+				cout << "Your savings account is \" "<< b1.name << "Saves \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+				
+			case 'P' :
+				cout << "Your Personal account is \" " << b1.name << "1184 \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			case 'O' :
+				cout << "Your online banking account is \" " << b1.name << "Pays \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			default :
+				cout << "Sorry we don't know this account. " << endl;
+		}
+	}
+	
+	
+	else if(b1.bank_choise == b1.other){
+	    cout << "Please tell us name of bank :-" ;
+	    cin >> b1.other_bank;
+	    cout << endl << "Please tell us which account are you looking for. " << endl;
+		cout << "S for savings account " << endl << "P for Personal account" << endl << "O for online banking account. " << endl;
+		cin >> b1.n;
+		
+		switch(b1.n){
+			case 'S' :
+				cout << "Your savings account is \" "<< b1.name << "Saves \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+				
+			case 'P' :
+				cout << "Your Personal account is \" " << b1.name << "1184 \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			case 'O' :
+				cout << "Your online banking account is \" " << b1.name << "Pays \"" << endl << "Sorry! we can't tell more details." << endl;
+				break;
+			default :
+				cout << "Sorry we don't know this account. " << endl;
+		}
+	}
+	
+	
+	else{
+		cout << "Sorry! we don't have registered data of this bank." << endl;
+	}
+	
+	
+	
+	long end = gettime();
+	cout << end-start;
+	
+	//    0.011750372 this much second
+	return 0;
+}
