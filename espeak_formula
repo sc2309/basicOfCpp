@@ -1,0 +1,5 @@
+#include <string.h> & <windows.h>
+string phrase = "text to speak";
+string command = "espeak\"" + phrase + "\"";
+const char* charCommand = command.c_str();
+system(charCommand);
