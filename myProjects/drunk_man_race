@@ -1,0 +1,11 @@
+start
+    enter age    \/
+    difficulty easy <50,  medium <75 , hard <100     \/
+    target < 225     \/
+    enter --> rand number(steps) <=6   \/
+	add all functions
+	easy 1 obstacle,medium 2 obstacle,hard 3 obstacle;
+    
+
+obstacles touch ^out^
+show current stps with target and left over steps
