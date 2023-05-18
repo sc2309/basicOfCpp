@@ -3,8 +3,8 @@ start
     difficulty easy <50,  medium <75 , hard <100     \/
     target < 225     \/
     enter --> rand number(steps) <=6   \/
-	add all functions
-	easy 1 obstacle,medium 2 obstacle,hard 3 obstacle;
+	easy 1 obstacle,medium 2 obstacle,hard 3 obstacle; \/
+	add obstacles functions
     
 
 obstacles touch ^out^
