@@ -7,8 +7,8 @@ using namespace std;
 
 class Drunk_man{
     private:
-        string diff,choise,enter;                  //   here 'diff' is difficulty
-        int randSteps,target,rand_Obs,obsCount,left,age,Obs_choise,obsTime;   // here 't' is the target and rand_Obs is a random obstacle  
+        string diff,enter;                  //   here 'diff' is difficulty
+        int randSteps,target,rand_Obs,obsCount,age,Obs_choise,obsTime;   // here 't' is the target and rand_Obs is a random obstacle  
         string ins = "Please press a\n";
         string help = "\n\n\nWe will generate a random number which will be your steps >=6\nWe will give you a target and you have to achieve this\nAnd there will be some obstacles \nEg. go left or right in one of these there are bombs\nIf you go in that path you will lose if you go in correct you will be safe and have to complete\nthe target\n\n";
     public:
@@ -18,7 +18,7 @@ class Drunk_man{
             cin >> enter;
             cout << "Please enter your age:-\n\n";
             cin >> age;
-            if(age >= 7){
+            if(age >= 5){
                 DifficultySelector();
             }
             else{
@@ -55,15 +55,15 @@ class Drunk_man{
         int showTarget(){
             srand(time(NULL));
             if(diff == "easy"){
-                target = (rand() % ( 50 - 25 + 1)) + 25;
+                target = (rand() % ( 50 - 25 + 1) + 25);
                 cout << target << " is your step target\n\n";
             }
             else if(diff == "medium"){
-                target = (rand() % ( 75 - 50 + 1)) + 50;
+                target = (rand() % ( 75 - 50 + 1) + 50);
                 cout << target << " is your step target\n\n";
             }
             else if(diff == "hard"){
-                target = (rand() % ( 100 - 75 + 1)) + 75;
+                target = (rand() % ( 100 - 75 + 1) + 75);
                 cout << target << " is your step target\n\n";
             }
             else{
@@ -72,14 +72,30 @@ class Drunk_man{
         
         return 0;
         }
+        int ObsTimeGene(){
+            if(diff == "easy"){
+                obsCount = 3;
+                obsTime = rand() % target;
+            }
+            else if(diff == "medium"){
+                obsCount = 4;
+                obsTime = rand() % target;
+            }
+            else{
+                obsCount = 5;
+                obsTime = rand() % target;
+            }
+            return 0;
+        }
         int stepGenerater(){
+            srand(time(NULL));
+            cout << obsTime << endl;
             for(int i=1;i<=1000;i++){
                 randSteps = (rand() % (6 - 1 + 1) + 1);
                 cout << randSteps << " steps\n\n";
                 target = target - randSteps;
                 cout << "current target is "<< target << "\n\nplease press a\n";
                 cin >> enter;
-                cout << obsTime << endl;
                 if(randSteps == obsTime){
                     obstacle1();
                 }
@@ -92,26 +108,7 @@ class Drunk_man{
             return 0;
         }
         int obstacle1(){
-            if(diff == "easy"){
-                obsCount = 1;
-                obsTime = (rand() % target);
-                obstacle2();
-            }
-            else if(diff == "medium"){
-                obsCount = 2;
-                obsTime = (rand() % target);
-                obstacle2();
-            }
-            else if(diff == "hard"){
-                obsCount = 3;
-                obsTime = (rand() % target);
-                obstacle2();
-            }
-            stepGenerater();
-
-            return 0;
-        }
-        int obstacle2(){
+            srand(time(NULL));
             rand_Obs = rand() % 1;
             cout << "\n\nplease choose 0 for left and 1 for right\n\n";
             for(int i=obsCount;i<=0;i--){
