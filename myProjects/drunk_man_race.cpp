@@ -94,24 +94,18 @@ class Drunk_man{
         int obstacle1(){
             if(diff == "easy"){
                 obsCount = 1;
+                obsTime = (rand() % target);
                 obstacle2();
             }
             else if(diff == "medium"){
                 obsCount = 2;
+                obsTime = (rand() % target);
                 obstacle2();
             }
             else if(diff == "hard"){
                 obsCount = 3;
+                obsTime = (rand() % target);
                 obstacle2();
-            }
-            if(diff == "easy"){
-                obsTime = rand() % target;
-            }
-            else if(diff == "medium"){
-                obsTime = rand() % target;
-            }
-            else if(diff == "hard"){
-                obsTime = rand() % target;
             }
             stepGenerater();
 
