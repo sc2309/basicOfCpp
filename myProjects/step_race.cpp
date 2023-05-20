@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 using namespace std;
-
-// v7 successful "to be added obstacles"
-
 class Drunk_man{
     private:
         string diff,enter;                  //   here 'diff' is difficulty
@@ -69,34 +66,35 @@ class Drunk_man{
             else{
                 cout << " " << endl;
             }
-        
         return 0;
         }
         int ObsTimeGene(){
+            srand(time(NULL));
             if(diff == "easy"){
-                obsCount = 3;
                 obsTime = rand() % target;
+                return obsTime;
             }
             else if(diff == "medium"){
-                obsCount = 4;
                 obsTime = rand() % target;
+                return obsTime;
             }
             else{
-                obsCount = 5;
                 obsTime = rand() % target;
+                return obsTime; 
             }
             return 0;
         }
         int stepGenerater(){
             srand(time(NULL));
-            cout << obsTime << endl;
+            int obsTime2 = ObsTimeGene();
+            cout << "Obstacle in " << obsTime2 << endl;
             for(int i=1;i<=1000;i++){
-                randSteps = (rand() % (6 - 1 + 1) + 1);
+                randSteps = (rand() % (3 - 1 + 1) + 1);
                 cout << randSteps << " steps\n\n";
                 target = target - randSteps;
                 cout << "current target is "<< target << "\n\nplease press a\n";
                 cin >> enter;
-                if(randSteps == obsTime){
+                if(randSteps == obsTime2 || randSteps == obsTime2 + 2 || randSteps == obsTime2 - 2){
                     obstacle1();
                 }
                 if(target == 0 || target < 0){
@@ -104,33 +102,37 @@ class Drunk_man{
                     DifficultySelector();
                 }
             }
-
             return 0;
         }
         int obstacle1(){
             srand(time(NULL));
             rand_Obs = rand() % 1;
             cout << "\n\nplease choose 0 for left and 1 for right\n\n";
+            if(diff == "easy"){
+                obsCount = 3;
+            }
+            else if(diff == "medium"){
+                obsCount = 4;
+            }
+            else{
+                obsCount = 5;
+            }
             for(int i=obsCount;i<=0;i--){
                 cin >> Obs_choise;
-                obsCount = obsCount - 1;
+                obsCount--;
                 if(Obs_choise == rand_Obs && obsCount == 0){
                     stepGenerater();
-                    break;
                 }
                 else{
                     cout << "--- BOOOM! --- \nyou lose\n";
                     break;
                 }
             }
-
             return 0;
         }
 };
-
 int main(){
     Drunk_man Race_Start;
     Race_Start.start();
-
     return 0;
 }
