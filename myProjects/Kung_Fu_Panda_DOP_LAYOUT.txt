@@ -1,0 +1,29 @@
+start screen:
+    start game level n
+	    attacks Power blasters,power jump,power kick,power punch,dino sword.
+		health of Pandas, villan
+		villan 
+		health lose
+		can do attacks
+		levels save 
+		levels
+		boss fight
+		you lose
+	help
+	    info of hero,villian,attacks,how to play.
+	close
+	    program stop
+program stop
+
+features
+currency simple transaction;
+help
+
+
+           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   TASKS IN VILLIAN FUNCTION @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+random villian
+random moves
+one - one move
+
+
