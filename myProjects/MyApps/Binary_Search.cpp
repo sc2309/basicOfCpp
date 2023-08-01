@@ -29,5 +29,6 @@ int main(){
     low = 0;
     int n = sizeof(arr) / sizeof(arr[0]);
     high = n;
+    s.SearchA(x,arr,mid,low,high);
     return 0;
 }

@@ -1,0 +1,13 @@
+make a file of a zombie in C++
+make a user in C++
+kill zombie by A1 B2 C3 D4 E5 F6 G7 H8
+weapons will be reset after each game
+H8 with most powerful
+&
+A1 with least powerful
+D4 and H8 may have special ability
+
+display level
+display zombie health
+display your health
+

@@ -1,9 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
 using namespace std;
-
 class EnergyMoves{
     protected:
         int HeroHealth,VillianHealth = 200,BossHP = 500,damage,moveNum,moveCount = 0,charc;
@@ -47,7 +45,7 @@ class EnergyMoves{
                 HeroHealth = 510;
             }
             else{
-                HeroHealth = 300;
+                cout << "not a character";
             }
             return HeroHealth;
         }
@@ -60,9 +58,8 @@ class EnergyMoves{
                 }
                 for(int i = 1;i<=10000;i++){
                     HeroHealth = HeroHealth - 5;
-                    moveCount = 0;
                     cout << "TS has punched you\n\n Your HP is " << HeroHealth2 << " Your Turn ";
-                    moveCount = 1;
+                    moveCount++;
                     if(moveCount == 1){
                         Moves();
                         break;
@@ -96,7 +93,7 @@ class EnergyMoves{
                 CharT();
             }
             for(int i = 0;i<=10000;i++){
-                moveCount = 0;
+                moveCount--;
                 cout << "\nEnter your move by the number\n1.Kick\n2.Punch\n3.Energy Blast\n4.Energy Beam\n5.Blue Arrow\n6.Pheonix Sword\n\n";
                 cin >> moveNum;
                 if(moveNum == 1){
@@ -126,7 +123,7 @@ class EnergyMoves{
                 else{
                     cout << "" << endl;
                 }
-                moveCount = 1;
+                moveCount++;
                 if(VillianHealth == 0 || VillianHealth < 0){
                     start();
                 }

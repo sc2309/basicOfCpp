@@ -7,7 +7,7 @@ class Robot{
         string query,ans,username;
     public:
         int intro(){
-            cout << "Hello i am Baymax. Your personal talk assistant please tell your name\n";
+            cout << "Hello i am Baymax. Your personal talking assistant\n";
             getline(cin,username);
             cout << "Hello " << username;
             return 0;

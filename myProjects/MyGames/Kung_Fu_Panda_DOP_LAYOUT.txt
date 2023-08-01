@@ -14,13 +14,9 @@ start screen:
 	close
 	    program stop
 program stop
-
-features
-currency simple transaction;
 help
 
-
-           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   TASKS IN VILLIAN FUNCTION @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+           -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-   TASKS IN VILLIAN FUNCTION -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-
 
 random villian
 random moves
